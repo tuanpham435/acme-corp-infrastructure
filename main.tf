@@ -35,7 +35,6 @@ resource "aws_subnet" "public" {
   
   tags = {
     Name = "free-tier-subnet"
-    Tag = "Test"
   }
 }
 
