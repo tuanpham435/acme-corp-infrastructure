@@ -109,7 +109,7 @@ resource "aws_security_group" "instance_sg" {
 # Tạo EC2 instance với t2.micro (Free Tier)
 resource "aws_instance" "app_server" {
   ami                    = var.ami_id
-  instance_type          = "t3.micro" # Free Tier
+  instance_type          = "t2.micro" # Free Tier
   key_name               = var.key_name
   subnet_id              = aws_subnet.public.id
   vpc_security_group_ids = [aws_security_group.instance_sg.id]
