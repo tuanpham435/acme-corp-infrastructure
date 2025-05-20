@@ -13,3 +13,7 @@ output "ssh_command" {
   description = "SSH command to connect to the instance"
   value       = "ssh -i /path/to/${var.key_name}.pem ec2-user@${aws_eip.instance_eip.public_ip}"
 }
+
+output "print_interpolate_variable" {
+  value = var.interpolate_test
+}
